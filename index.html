@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOODY - Flood Information</title>
+
+    <style>
+       
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: bold;
+            color: #17365d;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #3984d6;
+        }
+
+        /* Main layout */
+        
+        
+.main-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    padding: 10px;
+    flex: 1;
+    align-items: stretch;
+    min-height: 0;
+}
+
+.flood-areas {
+    border: 3px solid #222;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 110%;
+}
+
+        .flood-areas h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .area-card {
+            border: 4px solid #3984d6;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .area-card img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Hero section */
+        
+        .hero {
+    display: block;
+    padding: 15px 30px;
+}
+
+.hero-text {
+    text-align: left;
+    margin-left: 0;
+}
+
+        .hero-image {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .hero-text h1 {
+            color: #3984d6;
+            font-size: 36px;
+            margin: 0 0 15px;
+        }
+
+        .hero-text p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #3984d6;
+            color: white;
+            padding: 10px 14px;
+            text-decoration: none;
+            border: 2px solid #222;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #245c9c;
+        }
+
+        .submit-section {
+            margin-top: 25px;
+        }
+
+        .submit-section h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+ footer {
+    border-top: 3px solid #222;
+    margin-right: 10px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+    margin-top: auto;
+}
+
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 700px) {
+            body {
+                padding: 8px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Navigation bar -->
+    <header>
+        <div class="logo">FLOODY</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="reports.html">Reports</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <!-- Latest flood areas: add images later -->
+        <aside class="flood-areas">
+            <h3>Latest Flood Area!</h3>
+
+            <div class="area-card">
+                <!-- Add Bukit Kachi image here -->
+            </div>
+
+            <div class="area-card">
+                <!-- Add UUM Gate image here -->
+            </div>
+
+            <div class="area-card">
+                <!-- Add Sintok image here -->
+            </div>
+        </aside>
+
+        <!-- Hero section -->
+        <section class="hero">
+
+            <!-- Add your circular logo image here later -->
+
+            <div class="hero-text">
+                <h1>Stay Safe<br>with One Notification</h1>
+
+                <p>Check the latest flood reports in your area.</p>
+
+                <a href="reports.html" class="button">
+                    Flood Reports
+                </a>
+
+                <div class="submit-section">
+                    <h3>Have info about floods?</h3>
+
+                    <a href="submit-report.html" class="button">
+                        + Submit a Report
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Contact information -->
+    <footer>
+        <div class="contact-info">
+            <strong>Contact Info:</strong>
+            <p>✉ floody@email.com</p>
+            <p>▯ 01X-XXXXXXX</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
